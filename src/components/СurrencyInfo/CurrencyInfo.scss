@@ -1,0 +1,51 @@
+.CurrencyInfo {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    left: -410px;
+    bottom: 0;
+    z-index: 2;
+    width: 359px;
+    max-width: 100%;
+    padding-left: 35px;
+    padding-right: 16px;
+    align-items: stretch;
+    color: white;
+    background-color: green;
+    transition: 0.3s;
+
+    &.active {
+        left: 0;
+    }
+}
+
+.titleBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    button {
+        border: none;
+        outline: none;
+        background-color: green;
+        font-weight: bold;
+        font-size: xx-large;
+        color: white;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin-top: 11px;
+    }
+}
+
+.infoItem {
+    display: flex;
+
+    span {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,87 @@
+table {
+    thead {
+        position: fixed;
+        z-index: 1000;
+    }
+
+    th {
+        font-size: 20px;
+        width: 400px;
+        height: 50px;
+        background-color: green;
+        color: white;
+        outline: 1px solid white;
+        outline-offset: 0px;
+        &:nth-child(1) {
+            width: 100px;
+        }
+
+        &:nth-child(2) {
+            width: 300px;
+        }
+    }
+
+    tbody {
+        position: relative;
+        top: 59px;
+        left: 2px;
+
+        %active {
+            color: white;
+            background-color: green;
+        }
+
+        tr {
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                @extend %active;
+            }
+
+            &.active {
+                @extend %active;
+            }
+        }
+
+        td {
+            font-size: 18px;
+            outline: 1px solid #00800021;
+            outline-offset: 0px;
+            width: 400px;
+            height: 50px;
+            text-align: center;
+
+            &:nth-child(1) {
+                width: 100px;
+            }
+
+            &:nth-child(2) {
+                width: 300px;
+            }
+
+            &:nth-child(5) {
+                position: absolute;
+                outline: none;
+                width: 87px;
+            }
+        }
+    }
+
+    div {
+        svg {
+            fill: white;
+            margin: 0;
+            position: relative;
+            left: 135px;
+
+            &.first {
+                left: 17px;
+            }
+
+            &.two {
+                left: 97px;
+            }
+        }
+    }
+}
