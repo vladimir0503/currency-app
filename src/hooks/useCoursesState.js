@@ -21,7 +21,15 @@ const useCoursesState = () => {
     };
 
     const getCoursesData = async () => {
-        let days = 0;
+        let days = 1;
+
+        const D = new Date();
+
+        const data = await getCoursesList();
+        setCourses(coursesList => [...coursesList, {
+            date: `${D.getDate()}.${addNullToValue(D.getMonth() + 1)}.${D.getFullYear()}`,
+            courses: Object.values(data.Valute)
+        }]);
 
         while (days <= 9) {
             let date = new Date();
