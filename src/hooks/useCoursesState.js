@@ -27,7 +27,7 @@ const useCoursesState = () => {
 
         const data = await getCoursesList();
         setCourses(coursesList => [...coursesList, {
-            date: `${D.getDate()}.${addNullToValue(D.getMonth() + 1)}.${D.getFullYear()}`,
+            date: `${addNullToValue(D.getDate())}.${addNullToValue(D.getMonth() + 1)}.${D.getFullYear()}`,
             courses: Object.values(data.Valute)
         }]);
 
